@@ -12,6 +12,9 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\TagsColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -27,9 +30,13 @@ class CustomerResource extends Resource
             ->schema([
                 Card::make()
                 ->schema([
-                    TextInput::make('name'),
-                    TextInput::make('lastname'),
-                    TextInput::make('city'),
+                    TextInput::make('name')->required(),
+                    TextInput::make('lastname')->required(),
+                    TextInput::make('city')->required(),
+                    TextInput::make('eye_color'),
+                    // Select::make('eye_color'),
+                    TextInput::make('hair_color'),
+                    TextInput::make('citizenship'),
                 ])
             ]);
     }
@@ -38,10 +45,16 @@ class CustomerResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')->sortable(),
+                TextColumn::make('lastname')->sortable(),
+                TextColumn::make('city'),
+                TextColumn::make('eye_color'),
+                TextColumn::make('hair_color'),
+                TagsColumn::make('tags')->separator(' '),
+                TagsColumn::make('citizenship'),
             ])
             ->filters([
-                //
+                // SelectFilter::make('eye_color')->relationship('eye_color', 'name')
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

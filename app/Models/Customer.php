@@ -14,7 +14,7 @@ class Customer extends Model
         'city',
         'eye_color',
         'hair_color',
-        'citizenship',
+        'citizenship' => 'array',
         'gender',
     ];
 }
