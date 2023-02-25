@@ -1,0 +1,98 @@
+<?php
+
+return [
+    'people' => [
+        [
+            'name' => 'Alessandro',
+            'lastname' => 'Conti',
+            'city' => 'Rome',
+            'eye_color' => 'brown',
+            'hair_color' => 'black',
+            'citizenship' => 'Italian',
+            'gender' => 'male',
+        ],
+        [
+            'name' => 'Giulia',
+            'lastname' => 'Rossi',
+            'city' => 'Florence',
+            'eye_color' => 'blue',
+            'hair_color' => 'blonde',
+            'citizenship' => 'Italian',
+            'gender' => 'female',
+        ],
+        [
+            'name' => 'Lorenzo',
+            'lastname' => 'Greco',
+            'city' => 'Naples',
+            'eye_color' => 'green',
+            'hair_color' => 'brown',
+            'citizenship' => 'Italian',
+            'gender' => 'male',
+        ],
+        [
+            'name' => 'Valentina',
+            'lastname' => 'Bianchi',
+            'city' => 'Milan',
+            'eye_color' => 'brown',
+            'hair_color' => 'black',
+            'citizenship' => 'Italian',
+            'gender' => 'female',
+        ],
+        [
+            'name' => 'Gabriele',
+            'lastname' => 'Rizzo',
+            'city' => 'Palermo',
+            'eye_color' => 'hazel',
+            'hair_color' => 'brunette',
+            'citizenship' => 'Italian',
+            'gender' => 'male',
+        ],
+        [
+            'name' => 'Sofia',
+            'lastname' => 'Gallo',
+            'city' => 'Turin',
+            'eye_color' => 'brown',
+            'hair_color' => 'black',
+            'citizenship' => 'Italian',
+            'gender' => 'female',
+        ],
+        [
+            'name' => 'Matteo',
+            'lastname' => 'Moretti',
+            'city' => 'Venice',
+            'eye_color' => 'green',
+            'hair_color' => 'brown',
+            'citizenship' => 'Italian',
+            'gender' => 'male',
+        ],
+        [
+            'name' => 'Caterina',
+            'lastname' => 'Neri',
+            'city' => 'Bologna',
+            'eye_color' => 'brown',
+            'hair_color' => 'black',
+            'citizenship' => 'Italian',
+            'gender' => 'female',
+        ],
+        [
+            'name' => 'Antonio',
+            'lastname' => 'Lombardi',
+            'city' => 'Genoa',
+            'eye_color' => 'blue',
+            'hair_color' => 'blonde',
+            'citizenship' => 'Italian',
+            'gender' => 'male',
+        ],
+        [
+            'name' => 'Ginevra',
+            'lastname' => 'Ferrari',
+            'city' => 'Verona',
+            'eye_color' => 'brown',
+            'hair_color' => 'black',
+            'citizenship' => 'Italian',
+            'gender' => 'female',
+        ],
+    ]
+
+
+];
