@@ -1,10 +1,18 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Models\People;
 use Illuminate\Database\Seeder;
 
 class PeopleTableSeeder extends Seeder
 {
+        /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+
     public function run()
     {
         $people = config('db.people');
@@ -17,6 +25,7 @@ class PeopleTableSeeder extends Seeder
             $new_person->eye_color = $person['eye_color'];
             $new_person->hair_color = $person['hair_color'];
             $new_person->citizenship = $person['citizenship'];
+            $new_person->save();
         }
     }
 }

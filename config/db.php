@@ -9,7 +9,6 @@ return [
             'eye_color' => 'brown',
             'hair_color' => 'black',
             'citizenship' => 'Italian',
-            'gender' => 'male',
         ],
         [
             'name' => 'Giulia',
@@ -18,7 +17,6 @@ return [
             'eye_color' => 'blue',
             'hair_color' => 'blonde',
             'citizenship' => 'Italian',
-            'gender' => 'female',
         ],
         [
             'name' => 'Lorenzo',
@@ -27,7 +25,6 @@ return [
             'eye_color' => 'green',
             'hair_color' => 'brown',
             'citizenship' => 'Italian',
-            'gender' => 'male',
         ],
         [
             'name' => 'Valentina',
@@ -36,7 +33,6 @@ return [
             'eye_color' => 'brown',
             'hair_color' => 'black',
             'citizenship' => 'Italian',
-            'gender' => 'female',
         ],
         [
             'name' => 'Gabriele',
@@ -45,7 +41,6 @@ return [
             'eye_color' => 'hazel',
             'hair_color' => 'brunette',
             'citizenship' => 'Italian',
-            'gender' => 'male',
         ],
         [
             'name' => 'Sofia',
@@ -54,7 +49,6 @@ return [
             'eye_color' => 'brown',
             'hair_color' => 'black',
             'citizenship' => 'Italian',
-            'gender' => 'female',
         ],
         [
             'name' => 'Matteo',
@@ -63,7 +57,6 @@ return [
             'eye_color' => 'green',
             'hair_color' => 'brown',
             'citizenship' => 'Italian',
-            'gender' => 'male',
         ],
         [
             'name' => 'Caterina',
@@ -72,7 +65,6 @@ return [
             'eye_color' => 'brown',
             'hair_color' => 'black',
             'citizenship' => 'Italian',
-            'gender' => 'female',
         ],
         [
             'name' => 'Antonio',
@@ -81,7 +73,6 @@ return [
             'eye_color' => 'blue',
             'hair_color' => 'blonde',
             'citizenship' => 'Italian',
-            'gender' => 'male',
         ],
         [
             'name' => 'Ginevra',
@@ -90,7 +81,6 @@ return [
             'eye_color' => 'brown',
             'hair_color' => 'black',
             'citizenship' => 'Italian',
-            'gender' => 'female',
         ],
     ]
 
