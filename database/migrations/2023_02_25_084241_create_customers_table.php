@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('lastname');
             $table->string('city');
-            $table->string('eye_color');
-            $table->string('hair_color');
-            $table->string('citizenship');
+            $table->string('eye_color')->nullable();
+            $table->string('hair_color')->nullable();
+            $table->string('citizenship')->nullable();
             $table->timestamps();
         });
     }
