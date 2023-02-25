@@ -82,6 +82,30 @@ return [
             'hair_color' => 'Black',
             'citizenship' => 'Italian',
         ],
+        [
+            'name' => 'John',
+            'lastname' => 'Doe',
+            'city' => 'San Francisco',
+            'eye_color' => 'Green',
+            'hair_color' => 'Medium Brown',
+            'citizenship' => 'American',
+        ],
+        [
+            'name' => 'Diana',
+            'lastname' => 'Prince',
+            'city' => 'Los Angeles',
+            'eye_color' => 'Brown',
+            'hair_color' => 'Black',
+            'citizenship' => 'American',
+        ],
+        [
+            'name' => 'Clark',
+            'lastname' => 'Kent',
+            'city' => 'Metropolis',
+            'eye_color' => 'Blue',
+            'hair_color' => 'Dark Brown',
+            'citizenship' => 'American',
+        ],
     ]
 
 

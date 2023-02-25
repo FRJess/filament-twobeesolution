@@ -89,18 +89,26 @@ class CustomerResource extends Resource
                     'french' => 'French',
                 ]),
                 SelectFilter::make('hair_color')
-                ->options(Customer::query()->distinct()->pluck('hair_color', 'hair_color')),
-                SelectFilter::make('hair_color')
                 ->multiple()
                 ->options([
-                    'black'=>'Black',
-                    'dark brown'=>'Dark Brown',
-                    'medium brown'=>'Medium Brown',
-                    'light brown'=>'Light Brown',
-                    'dark blonde'=>'Dark Blonde',
-                    'medium blonde'=>'Medium Blonde',
-                    'light blonde'=>'Light Blonde',
-                    'other'=>'Other',
+                    'Black'=>'Black',
+                    'Dark Brown'=>'Dark Brown',
+                    'Medium Brown'=>'Medium Brown',
+                    'Light Brown'=>'Light Brown',
+                    'Dark Blonde'=>'Dark Blonde',
+                    'Medium Blonde'=>'Medium Blonde',
+                    'Light Blonde'=>'Light Blonde',
+                    'Other'=>'Other',
+                ]),
+                SelectFilter::make('eye_color')
+                ->multiple()
+                ->options([
+                    'Brown'=>'Brown',
+                    'Hazel'=>'Hazel',
+                    'Green'=>'Green',
+                    'Blue'=>'Blue',
+                    'Gray'=>'Gray',
+                    'Other'=>'Other',
                 ])
             ])
             ->actions([
