@@ -49,12 +49,18 @@ class CustomerResource extends Resource
                 TextColumn::make('lastname')->sortable(),
                 TextColumn::make('city'),
                 TextColumn::make('eye_color'),
-                TextColumn::make('hair_color'),
-                TagsColumn::make('tags')->separator(' '),
-                TagsColumn::make('citizenship'),
+                TagsColumn::make('hair_color'),
+                TextColumn::make('citizenship')->default('N/A'),
             ])
             ->filters([
                 // SelectFilter::make('eye_color')->relationship('eye_color', 'name')
+                SelectFilter::make('citizenship')
+                ->multiple()
+                ->options([
+                    'italian' => 'Italian',
+                    'american' => 'American',
+                    'french' => 'French',
+                ])
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
