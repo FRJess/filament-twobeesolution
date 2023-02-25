@@ -7,11 +7,13 @@ use App\Filament\Resources\CustomerResource\RelationManagers;
 use App\Models\Customer;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\TagsColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
@@ -33,9 +35,26 @@ class CustomerResource extends Resource
                     TextInput::make('name')->required(),
                     TextInput::make('lastname')->required(),
                     TextInput::make('city')->required(),
-                    TextInput::make('eye_color'),
-                    // Select::make('eye_color'),
-                    TextInput::make('hair_color'),
+                    Select::make('eye_color')
+                    ->options([
+                        'Brown'=>'Brown',
+                        'Hazel'=>'Hazel',
+                        'Green'=>'Green',
+                        'Blue'=>'Blue',
+                        'Gray'=>'Gray',
+                        'Other'=>'Other',
+                    ]),
+                    Select::make('hair_color')
+                    ->options([
+                        'Black'=>'Black',
+                        'Dark Brown'=>'Dark Brown',
+                        'Medium Brown'=>'Medium Brown',
+                        'Light Brown'=>'Light Brown',
+                        'Dark Blonde'=>'Dark Blonde',
+                        'Medium Blonde'=>'Medium Blonde',
+                        'Light Blonde'=>'Light Blonde',
+                        'Other'=>'Other',
+                    ]),
                     TextInput::make('citizenship'),
                 ])
             ]);
@@ -48,8 +67,16 @@ class CustomerResource extends Resource
                 TextColumn::make('name')->sortable(),
                 TextColumn::make('lastname')->sortable(),
                 TextColumn::make('city'),
-                TextColumn::make('eye_color'),
-                TagsColumn::make('hair_color'),
+                // TextColumn::make('eye_color'),
+                TextColumn::make('hair_color'),
+                BadgeColumn::make('eye_color')
+                ->colors([
+                    'primary' => 'Blue',
+                    'secondary' => 'Gray',
+                    'warning' => 'Brown',
+                    'success' => 'Green',
+                    'danger' => 'Hazel',
+                ]),
                 TextColumn::make('citizenship')->default('N/A'),
             ])
             ->filters([
@@ -60,6 +87,20 @@ class CustomerResource extends Resource
                     'italian' => 'Italian',
                     'american' => 'American',
                     'french' => 'French',
+                ]),
+                SelectFilter::make('hair_color')
+                ->options(Customer::query()->distinct()->pluck('hair_color', 'hair_color')),
+                SelectFilter::make('hair_color')
+                ->multiple()
+                ->options([
+                    'black'=>'Black',
+                    'dark brown'=>'Dark Brown',
+                    'medium brown'=>'Medium Brown',
+                    'light brown'=>'Light Brown',
+                    'dark blonde'=>'Dark Blonde',
+                    'medium blonde'=>'Medium Blonde',
+                    'light blonde'=>'Light Blonde',
+                    'other'=>'Other',
                 ])
             ])
             ->actions([
