@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CustomerResource\Pages;
 use App\Filament\Resources\CustomerResource\RelationManagers;
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Models\Customer;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
@@ -116,7 +117,7 @@ class CustomerResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
-                // FilamentExportBulkAction::make('export'),
+                FilamentExportBulkAction::make('export'),
             ]);
     }
 
